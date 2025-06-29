@@ -1,3 +1,4 @@
+//main.js
 let cameras = [
     {
         id: 0,
