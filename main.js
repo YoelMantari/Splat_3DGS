@@ -744,7 +744,10 @@ async function main() {
         viewMatrix = JSON.parse(decodeURIComponent(location.hash.slice(1)));
         carousel = false;
     } catch (err) {}
-    const url = new URL(params.get("url") || "./UNI.splat", location.href);
+    const defaultName = "UNI.splat";
+    const fileName    = params.get("url") || defaultName;
+    const url         = new URL(fileName, location.href);
+    // const url = new URL(params.get("url") || "./UNI.splat", location.href);
     /*const url = new URL(
         // "nike.splat",
         // location.href,
