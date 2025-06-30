@@ -746,15 +746,15 @@ async function main() {
     } catch (err) {}
     const defaultName = "UNI.splat";
     const fileName    = params.get("url") || defaultName;
-    const url         = new URL(fileName, location.href);
+    
     // const url = new URL(params.get("url") || "./UNI.splat", location.href);
-    /*const url = new URL(
+    const url = new URL(
         // "nike.splat",
         // location.href,
         params.get("url") || "train.splat",
         "https://huggingface.co/cakewalk/splat-data/resolve/main/",
     );
-    */
+    
     const req = await fetch(url, {
         mode: "cors", // no-cors, *cors, same-origin
         credentials: "omit", // include, *same-origin, omit
